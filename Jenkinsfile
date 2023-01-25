@@ -4,6 +4,11 @@
         skipStagesAfterUnstable()
     }
     stages {
+          stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
         stage('Deploy') {
             steps {
                 sh 'echo RamySabryStart_1'
