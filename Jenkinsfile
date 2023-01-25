@@ -4,20 +4,11 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'make' 
-            }
-        }
-        stage('Test'){
-            steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
-            }
-        }
         stage('Deploy') {
             steps {
-                sh 'make publish'
+                sh 'echo RamySabryStart_1
+                sh 'echo env.GIT_BRANCH'
+                sh 'echo RamySabryEnd_1
             }
         }
     }
