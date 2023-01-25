@@ -1,4 +1,4 @@
-pipeline { 
+'pipeline { 
     agent any 
     options {
         skipStagesAfterUnstable()
@@ -6,9 +6,9 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                sh 'echo RamySabryStart_1
-                sh 'echo env.GIT_BRANCH'
-                sh 'echo RamySabryEnd_1
+                sh 'echo RamySabryStart_1'
+                sh 'echo $env.GIT_BRANCH'
+                sh 'echo RamySabryEnd_1'
             }
         }
     }
